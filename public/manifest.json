@@ -1,5 +1,5 @@
 {
-  "background_color": "#ffffff",
+  "background_color": "#fff8e1",
   "display": "standalone",
   "icons": [
     {
@@ -8,8 +8,8 @@
       "type": "image/x-icon"
     }
   ],
-  "name": "Create React App Sample",
-  "short_name": "React App",
+  "name": "numsum",
+  "short_name": "numsum",
   "start_url": "./index.html",
-  "theme_color": "#000000"
+  "theme_color": "#ff6f00"
 }

@@ -1,0 +1,9 @@
+.Header-header {
+    border-bottom: thin solid #ff6f00;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.Header-header__title {
+    margin: 0;
+}

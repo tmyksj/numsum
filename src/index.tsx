@@ -11,4 +11,5 @@ ReactDOM.render(
     <App/>,
     document.querySelector('body > div') as HTMLElement
 );
+
 registerServiceWorker();

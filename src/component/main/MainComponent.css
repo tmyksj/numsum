@@ -1,0 +1,9 @@
+.MainComponent-main {
+    margin: auto;
+    padding: 1rem;
+    max-width: 40rem;
+}
+
+.MainComponent-main__description {
+    margin-bottom: 2rem;
+}

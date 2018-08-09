@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import Stage from './Stage';
+import AppComponent from "./AppComponent";
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Stage/>, div);
+    ReactDOM.render(<AppComponent/>, div);
     ReactDOM.unmountComponentAtNode(div);
 });

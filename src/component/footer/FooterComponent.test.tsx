@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import Footer from './Footer';
+import FooterComponent from './FooterComponent';
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Footer/>, div);
+    ReactDOM.render(<FooterComponent/>, div);
     ReactDOM.unmountComponentAtNode(div);
 });

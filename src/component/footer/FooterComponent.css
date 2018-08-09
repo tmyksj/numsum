@@ -1,10 +1,10 @@
-.Footer-footer {
+.FooterComponent-footer {
     border-top: thin solid #ff6f00;
     margin-top: 4rem;
     padding: 0.5rem 1rem;
     text-align: right;
 }
 
-.Footer-footer__copyright {
+.FooterComponent-footer__copyright {
     font-size: 0.8rem;
 }

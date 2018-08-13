@@ -28,11 +28,11 @@ class StageComponent extends React.Component<{}, {}> {
                 const value = this.stage.getCell(point);
 
                 if (this.currentCellList[y][x] !== value) {
-                    pending = true;
                     this.currentCellList[y][x] =
                         (this.currentCellList[y][x]
                             + this.currentCellListDelta[y][x]
                             + this.stage.stageProperty.max) % this.stage.stageProperty.max;
+                    pending = pending || this.currentCellList[y][x] !== value;
                 }
             }
         }
@@ -62,7 +62,7 @@ class StageComponent extends React.Component<{}, {}> {
         }
 
         const backBind: () => void = this.back.bind(this);
-        const backButtonDisabled: boolean = !this.stage.isBackable();
+        const backButtonDisabled: boolean = this.stage.isCleared() || !this.stage.isBackable();
 
         return (
             <div>
@@ -118,7 +118,7 @@ class StageComponent extends React.Component<{}, {}> {
         for (let y = 0; y < this.stage.stageProperty.height; y++) {
             this.currentCellList.push([]);
             for (let x = 0; x < this.stage.stageProperty.width; x++) {
-                this.currentCellList[y].push(-1);
+                this.currentCellList[y].push(0);
             }
         }
     }

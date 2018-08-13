@@ -22,6 +22,10 @@
     outline: 0;
 }
 
+.StageComponent-button--cell {
+    padding: 1rem 2rem;
+}
+
 .StageComponent-cell {
     margin-top: 1rem;
 }

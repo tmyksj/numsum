@@ -50,7 +50,7 @@ class StageComponent extends React.Component<{}, {}> {
                 const point = new Point(x, y);
 
                 cellList.push(
-                    <button className="StageComponent-button"
+                    <button className="StageComponent-button StageComponent-button--cell"
                             disabled={pending || this.currentCellList[y][x] === 0}
                             key={x + "-" + y + "-" + this.currentCellList[y][x]}
                             onClick={this.open.bind(this, point)}>

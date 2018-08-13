@@ -1,0 +1,15 @@
+{
+  "background_color": "#fff8e1",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "name": "numsum",
+  "short_name": "numsum",
+  "start_url": "./index.html",
+  "theme_color": "#ff6f00"
+}

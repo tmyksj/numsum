@@ -26,7 +26,10 @@ class StageComponent extends React.Component<{}, {}> {
                 const value: number = this.stage.getCell(point);
 
                 cellList.push(
-                    <button key={x + "-" + y + "-" + value} onClick={this.open.bind(this, point)}>
+                    <button className="StageComponent-button"
+                            disabled={value === 0}
+                            key={x + "-" + y + "-" + value}
+                            onClick={this.open.bind(this, point)}>
                         {value}
                     </button>
                 )
@@ -35,13 +38,16 @@ class StageComponent extends React.Component<{}, {}> {
         }
 
         const backBind: () => void = this.back.bind(this);
+        const backButtonDisabled: boolean = !this.stage.isBackable();
 
         return (
             <div>
-                <div>
-                    <button onClick={backBind}>Back</button>
+                <div className="StageComponent-manager">
+                    <button className="StageComponent-button"
+                            disabled={backButtonDisabled}
+                            onClick={backBind}>Back</button>
                 </div>
-                <div>
+                <div className="StageComponent-cell">
                     {cellList}
                 </div>
             </div>

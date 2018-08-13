@@ -1,0 +1,31 @@
+.StageComponent-button {
+    border: thin solid #ff6f00;
+    border-radius: 0.2rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 0.2rem;
+    padding: 0.5rem 2rem;
+    transition: ease-in-out 0.1s;
+}
+
+.StageComponent-button:disabled {
+    cursor: not-allowed;
+}
+
+.StageComponent-button:not(:disabled):hover {
+    background-color: #eeeeee;
+}
+
+.StageComponent-button:not(:disabled):focus {
+    background-color: #dddddd;
+    outline: 0;
+}
+
+.StageComponent-cell {
+    margin-top: 1rem;
+}
+
+.StageComponent-manager {
+    margin-bottom: 1rem;
+}

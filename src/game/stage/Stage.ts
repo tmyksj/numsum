@@ -36,6 +36,10 @@ export default class {
         this.observe();
     }
 
+    public isBackable(): boolean {
+        return this.operationList.length > 0;
+    }
+
     public isCleared(): boolean {
         return this.currentCellList.filter((value, index, array) => {
             return value !== 0;

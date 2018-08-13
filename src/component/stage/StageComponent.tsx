@@ -38,9 +38,9 @@ class StageComponent extends React.Component<{}, {}> {
         }
 
         if (pending) {
-            setTimeout(() => {
-                this.forceUpdate();
-            }, 50);
+            setTimeout(() => { this.forceUpdate(); }, 50);
+        } else if (this.stage.isCleared()) {
+            setTimeout(() => { this.newStage(); }, 50);
         }
 
         const cellList: JSX.Element[] = [];
@@ -98,16 +98,10 @@ class StageComponent extends React.Component<{}, {}> {
 
     private newStage(): void {
         this.stage = new Stage(new StageProperty());
-        this.stage.subscribe(() => {
-            this.forceUpdate();
-
-            if (this.stage.isCleared()) {
-                this.newStage();
-            }
-        });
-
+        this.stage.subscribe(() => { this.forceUpdate(); });
         this.resetCurrentCellList();
         this.resetCurrentCellListDelta();
+        this.forceUpdate();
     }
 
     private open(

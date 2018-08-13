@@ -8,7 +8,7 @@ export default class {
         difficulty: number = 10,
         height: number = 6,
         max: number = 10,
-        width: number = 10
+        width: number = 6
     ) {
         this.difficulty = difficulty;
         this.height = height;

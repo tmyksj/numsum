@@ -46,6 +46,10 @@ export default class {
         }).length === 0;
     }
 
+    public latestOperation(): Point {
+        return this.operationList[this.operationList.length - 1];
+    }
+
     public subscribe(
         subscriber: () => void
     ): void {
